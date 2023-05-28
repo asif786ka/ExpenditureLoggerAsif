@@ -4,6 +4,12 @@ ExpenditureLogger uses clean architecture principles to achieve usable features 
 Presentation folder has the ui. Domain folder has the business logic and Data folder has the data part. Usecases are used to have lighter viewmodels.
 UI is implemented using jetpack compose.
 
+ExpenditureLogger has below features :
+1) Dashboard screen with ability to add income/expense at top right.
+2) Income and expense transactions.
+3) Graphs to show income and expenses.
+4) Settings screen for app version and set expense limit.
+
 Built With 🛠
 Kotlin - First class and official programming language for Android development.
 Coroutines - For asynchronous and more..

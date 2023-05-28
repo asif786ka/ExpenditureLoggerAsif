@@ -135,7 +135,7 @@ class HomeViewModel @Inject constructor(
         date.value = currentDate
         currencyFormat()
 
-        viewModelScope.launch(IO) {
+        /*viewModelScope.launch(IO) {
             getLimitDurationUseCase().collect { pref ->
                 duration.value = pref
             }
@@ -145,7 +145,7 @@ class HomeViewModel @Inject constructor(
             getLimitKeyUseCase().collectLatest { pref ->
                 limitKey.value = pref
             }
-        }
+        }*/
 
         viewModelScope.launch(IO) {
             when (duration.value) {

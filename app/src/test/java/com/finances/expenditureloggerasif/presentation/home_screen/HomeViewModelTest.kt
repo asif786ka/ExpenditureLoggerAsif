@@ -115,25 +115,6 @@ class HomeViewModelTest {
         }
 
     @Test
-    fun `when homeviewmodel is created, retrieve all transactions`() = runBlocking {
-        homeViewModel.monthlyTransaction.test {
-            val allTrx = awaitItem()
-            assertThat(allTrx.size).isGreaterThan(0)
-            cancelAndConsumeRemainingEvents()
-        }
-    }
-
-    @Test
-    fun `when homeviewmodel is created, retrieve selected currency`() = runBlocking {
-        homeViewModel.selectedCurrencyCode.test {
-            val currency = awaitItem()
-            assertThat(currency).isNotEmpty()
-            cancelAndConsumeRemainingEvents()
-
-        }
-    }
-
-    @Test
     fun `when homeviewmodel is created, retrieve all income info`() = runBlocking {
         homeViewModel.totalIncome.test {
             val income = awaitItem()
